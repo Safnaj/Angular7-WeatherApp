@@ -1,0 +1,38 @@
+<br> 
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6 col-sm-offset-6">  
+    <div class="input-group">
+        <input class="form-control" name="mobile" placeholder="Enter Area Code" required> &nbsp;
+        <span class="input-group-btn">
+          <input class="btn btn-primary" type="submit" name="Submit" value="Submit">
+        </span>
+      </div>
+  </div>    
+  <div class="col-sm-3"></div>
+</div>
+<br>
+<h1></h1>
+<br>
+<div class="row">
+  <div class="col-sm-12">
+<!-- {{weather | json}} -->
+
+      <table class="table table-hover">
+          <thead class="thead-dark">
+            <th>City</th>
+            <th>City Code</th>
+            <th>Temperature</th>
+            <th>Description</th>            
+          </thead>
+          <tbody>
+            <tr *ngFor="let wea of weather">
+              <td>{{wea.name}}</td>
+              <td>{{wea.id}}</td>
+              <td>{{wea.main.temp}}</td>
+              <td>{{wea.weather[0].description}}</td>              
+            </tr>
+          </tbody>
+        </table>
+  </div>
+</div>
